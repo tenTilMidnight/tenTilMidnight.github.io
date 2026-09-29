@@ -1,12 +1,16 @@
 # Grace Tian — Portfolio
 
-A light-lavender portfolio for a maker exploring product management. Built with React, TypeScript, and Vite; deployable for free on GitHub Pages using a public repository.
+A light-lavender portfolio for a maker exploring product management. Built with React, TypeScript, Tailwind CSS 4, and Vite; deployable for free on GitHub Pages using a public repository.
 
 ## Current version
 
 Working Home, Work, four project overview pages, About, and Contact. Project text is based on resume statements and needs owner review. Graphics are labeled concept diagrams. This is a content-ready framework, not a set of fully evidenced case studies.
 
-GitHub username is confirmed as `tenTilMidnight`; the website links to her GitHub profile. A resume has not been bundled; Resume appears only after a shareable PDF is supplied and configured. No public site has been deployed by preparing this project.
+GitHub username is confirmed as `tenTilMidnight`; the website links to her GitHub profile. A resume has not been bundled; Resume appears only after a shareable PDF is supplied and configured. The portfolio is live at [tentilmidnight.github.io](https://tentilmidnight.github.io/).
+
+## Styling stack
+
+React components are styled with Tailwind CSS 4 through `@tailwindcss/vite`. `src/styles/site.css` imports Tailwind, maps the palette with `@theme inline`, and uses `@apply` for shared components. React markup uses utilities for composition. Custom CSS handles the project diagrams and precise editorial sizing.
 
 ## Visual direction
 
@@ -62,26 +66,19 @@ Ask the agent to read `AGENTS.md` and `TODO-CONTENT.md` first. Then give it one 
 
 > Read AGENTS.md. Help me complete the Viaway case study using the notes below. Separate my contribution from the team's, ask about missing facts, update the website and matching Markdown case, and run the build. Keep the design and other projects unchanged.
 
-## Publish on your GitHub account
+## Deployment
 
-Confirmed account: `tenTilMidnight`. There are **two different public repositories**:
+- **Live site:** [tentilmidnight.github.io](https://tentilmidnight.github.io/)
+- **Public source:** [tenTilMidnight/tenTilMidnight.github.io](https://github.com/tenTilMidnight/tenTilMidnight.github.io)
+- **Branch:** `main`
+- **Pages source:** GitHub Actions
+- **Workflow:** `.github/workflows/deploy.yml`
 
-- **`tenTilMidnight.github.io`**: this website's complete project; publishes your user site.
-- **`tenTilMidnight`**: your Profile README; use [this template](docs/PROFILE_README.template.md), replacing all placeholders before publishing.
+The workflow installs the locked dependencies, builds `dist`, and deploys that artifact to Pages. Keep the complete source project at the repository root. Do not upload `node_modules`, private files, or only a ZIP. Every push to `main` triggers a new deployment; verify the Actions run and public site after a change.
 
-Inspect existing repositories before using them. Do not overwrite existing content or push to somebody else's account.
+Navigation uses `HashRouter` and Vite uses `base: './'`. A direct project link such as [Viaway](https://tentilmidnight.github.io/#/work/viaway) survives a page refresh without server-side route rewrites.
 
-1. Create or reuse the public `tenTilMidnight.github.io` repository on your own account.
-2. Put this project's files directly at its root. Include `.github/workflows/deploy.yml` and `package-lock.json`. Do not upload `node_modules` or just a ZIP.
-3. Confirm the default branch is `main`, or update the workflow's branch trigger.
-4. In Settings → Pages, select **GitHub Actions** as the source.
-5. Push the files, then check the Actions run. If needed, run the workflow manually.
-6. After successful deployment, open the actual URL shown by GitHub. Check mobile layout, project links, and refresh a detail page.
-7. Add your verified site URL to your GitHub Profile and the separate public username repository's README.
-
-The expected user-site URL is `https://tenTilMidnight.github.io/`; it is not a verified live link until deployment succeeds. This project also supports a repository subpath because assets use a relative base and navigation uses hash routes.
-
-GitHub Pages is available for public repositories on GitHub Free. No paid hosting, backend, or custom domain is needed. See [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) and [Profile README documentation](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme).
+The optional `tenTilMidnight` repository has a different purpose: its root README appears on the GitHub profile. It has not been created as part of the website deployment and requires separate owner authorization. [A draft README is available](docs/PROFILE_README.template.md).
 
 ## A good next session
 

@@ -4,7 +4,7 @@ This file is for the owner and her agent. Missing facts should stay here until c
 
 ## Account and personal information
 
-- GitHub username confirmed: `tenTilMidnight`. Inspect the `tenTilMidnight` and `tenTilMidnight.github.io` repositories before publishing; verify Pages deployment before marking the website live.
+- GitHub username confirmed: `tenTilMidnight`. The public website repository is `tenTilMidnight.github.io`; GitHub Actions deployment and the public homepage have been verified. The optional `tenTilMidnight` Profile README repository has not been created and requires separate authorization.
 - Confirm the listed email and LinkedIn URL are appropriate for the public site.
 - Supply a shareable resume PDF; do not publish a broken Resume link.
 - Confirm whether "Football" is the preferred English term for the selected interest before adding stories or photographs.

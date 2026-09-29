@@ -10,9 +10,9 @@ This is an independent, portable project. Do not refer to another person's websi
 
 Read README.md, TODO-CONTENT.md, src/data/profile.ts, and src/data/projects.ts. Grace has explicitly confirmed her **current GitHub username: `tenTilMidnight`** and authorized a public website repository and GitHub Pages deployment. The separate GitHub Profile README repository still requires explicit authorization. She believes neither repository below exists; inspect before modifying existing work. Do not re-ask for the confirmed username unless she changes accounts. Verify authenticated identity before remote writes.
 
-### Required public repositories: two distinct purposes
+### GitHub repositories: two distinct purposes
 
-Once Grace has confirmed the username and authorized setting up her GitHub presence, create or reuse BOTH public repositories on **her** account:
+The website repository is authorized. Create the separate Profile README repository only after Grace explicitly authorizes that additional repository. With authorization for each purpose, create or reuse the corresponding public repository on **her** account:
 
 1. `USERNAME.github.io` — the website repository. Upload this complete project, configure GitHub Pages with GitHub Actions, and publish to the actual deployment URL. The expected user-site URL is `https://USERNAME.github.io/`.
 2. `USERNAME` — the repository named **exactly the same as her GitHub username**. Its root README.md is her GitHub Profile README. Introduce Grace, link the deployed portfolio, and link real project summaries or repositories. This is a public repository too.
@@ -43,7 +43,7 @@ The current project summaries are based on resume statements, not independently 
 
 ## Architecture and editing
 
-Stack: React 18, TypeScript, Vite, React Router. Use npm and preserve package-lock.json. No backend or API key is required.
+Stack: React 18, TypeScript, Vite, Tailwind CSS 4, React Router. Tailwind is required by the owner; use its Vite plugin, palette theme tokens, utilities, and shared component layers for styling. Use npm and preserve package-lock.json. No backend or API key is required.
 
 - `src/data/profile.ts`: name, intro, contacts, education, interests, confirmed GitHub username, optional resume path.
 - `src/data/projects.ts`: project summaries, roles, stages, tags, and evidence links.

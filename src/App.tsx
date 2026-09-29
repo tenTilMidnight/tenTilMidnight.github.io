@@ -13,7 +13,7 @@ function Header() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => setOpen(false), [pathname]);
-  return <header className="header"><div className="shell nav-row">
+  return <header className="relative z-20 border-b border-line bg-page"><div className="shell nav-row">
     <Link className="brand" to="/" aria-label="Grace Tian home"><span className="monogram">gt.</span><span>Grace Tian</span></Link>
     <button className="menu-toggle" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} aria-controls="main-nav" onClick={() => setOpen(!open)}>{open ? <X size={22}/> : <Menu size={22}/>}</button>
     <nav id="main-nav" className={open ? 'navigation open' : 'navigation'} aria-label="Main navigation">
@@ -43,7 +43,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   </Link>;
 }
 function Home() {
-  return <><section className="hero shell"><div className="hero-top"><span className="eyebrow">Maker at heart. Product-minded.</span><span className="hero-location">CMU · Pittsburgh</span></div><h1>I turn ideas into<br/><span className="serif">things people can use.</span></h1><div className="hero-bottom"><p>{profile.intro}</p><Link className="button primary" to="/work">Explore my work</Link></div><div className="hero-rule"><span>Think it through.</span><span>Make it real.</span><span>Keep learning.</span></div></section>
+  return <><section className="hero shell"><div className="hero-top flex items-center justify-between max-[640px]:gap-5"><span className="eyebrow">Maker at heart. Product-minded.</span><span className="hero-location">CMU · Pittsburgh</span></div><h1>I turn ideas into<br/><span className="serif">things people can use.</span></h1><div className="hero-bottom"><p>{profile.intro}</p><Link className="button primary" to="/work">Explore my work</Link></div><div className="hero-rule"><span>Think it through.</span><span>Make it real.</span><span>Keep learning.</span></div></section>
     <section className="section shell"><div className="section-heading"><div><span className="eyebrow">01 / Selected work</span><h2>From a question<br/>to something <em>tangible.</em></h2></div><Link className="text-link" to="/work">All four projects <Plus size={16}/></Link></div><div className="project-grid">{projects.slice(0,3).map((p,i) => <ProjectCard key={p.slug} project={p} index={i}/>)}</div></section>
     <section className="experience-section"><div className="shell experience-layout"><div><span className="eyebrow">02 / In practice</span><h2>Learning by<br/><em>building.</em></h2><p>Two AI product internships.<br/>Different questions, hands-on work.</p></div><div className="experience-list">{projects.slice(0,2).map(p => <Link to={`/work/${p.slug}`} className="experience-item" key={p.slug}><span className="small-label">{p.period}</span><div><h3>{p.name}</h3><p>{p.role}</p></div><Plus size={22}/></Link>)}</div></div></section>
     <section className="shell about-teaser"><span className="eyebrow">03 / Beyond the projects</span><h2>Off screen.<br/><em>On the field.</em></h2><div><p>There’s more to me than the project list. Away from product work, my interests include ultimate frisbee and football.</p><Link className="text-link" to="/about">A little more about me <Plus size={16}/></Link></div></section><ContactStrip/>
